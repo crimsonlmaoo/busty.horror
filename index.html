@@ -14,11 +14,14 @@
         
         .top-bar {
             background-color: #333;
-            color: black;
+            color: transparent;
             padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-image: linear-gradient(to right, red, black);
+            -webkit-background-clip: text;
+            background-clip: text;
         }
 
         .discord-button {
