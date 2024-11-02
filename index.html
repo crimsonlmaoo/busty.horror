@@ -12,18 +12,28 @@
             padding: 0;
             background-color: black;
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Align items at the start */
+            height: 100vh; /* Full height of the viewport */
+            position: relative; /* For absolute positioning of hover box */
         }
-        
+
         .top-bar {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8);
+            backdrop-filter: blur(10px);
             color: transparent;
             padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-image: linear-gradient(to right, red, black);
             -webkit-background-clip: text;
             background-clip: text;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 2;
         }
 
         .discord-button {
