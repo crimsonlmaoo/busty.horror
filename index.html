@@ -119,12 +119,31 @@
             z-index: 10;
     </style>
 </head>
+    <script>
+    const audio = new Audio('https://github.com/oggahogga/nxo.lol/raw/main/public/go.mp3');
+    audio.loop = true;
+
+    const muteButton = document.getElementById('mute-button');
+    let isMuted = false;
+
+    muteButton.addEventListener('click', () => {
+        if (isMuted) {
+            audio.play();
+        }
+        isMuted = !isMuted;
+        audio.muted = isMuted;
+        muteButton.textContent = isMuted ? 'Unmute' : 'Mute';
+    });
+});
+        
+    </script>
 <body>
     <marquee>Download Busty Horror right now!!!!!! https://roastedduckreel.itch.io/busty-horror</marquee>
 
     <div class="top-bar">
         <h1>Busty Horror</h1>
         <a href="https://discord.gg/bustyhorror" class="discord-button">Discord Server</a>
+        <li><button id="mute-button">Mute</button></li>
     </div>
 
     <main>
@@ -132,9 +151,5 @@
         <p>One of the best of the best Gorilla Tag Horror games by Roasty.</p>
         <a href="https://roastedduckreel.itch.io/busty-horror" class="big-button" target="_blank">Download Now!!!</a>
     </main>
-    
-    <audio autoplay loop>
-        <source src="lostwoods.mp3" type="audio/mp3">
-    </audio>
 </body>
 </html>
