@@ -15,24 +15,23 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Align items at the start */
-            height: 100vh; /* Full height of the viewport */
-            position: relative; /* For absolute positioning of hover box */
+            justify-content: flex-start;
+            height: 100vh;
+            position: relative;
         }
 
         .top-bar {
             background-color: rgba(51, 51, 51, 0.8);
             backdrop-filter: blur(10px);
             color: transparent;
-            padding: 10px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            -webkit-background-clip: text;
-            background-clip: text;
+            border-radius: 15px;
             position: absolute;
-            top: 0;
-            width: 100%;
+            top: 20px;
+            width: calc(100% - 40px);
             z-index: 2;
         }
 
