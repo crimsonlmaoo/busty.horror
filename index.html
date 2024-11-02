@@ -19,37 +19,30 @@
             height: 100vh;
             position: relative;
             opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
 
-@keyframes dropIn {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-.top-bar {
-    background-color: rgba(51, 51, 51, 0.8);
-    backdrop-filter: blur(3px);
-    color: transparent;
-    padding: 5px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 15px;
-    position: absolute;
-    top: 20px;
-    width: calc(95% - 30px);
-    z-index: 2;
-    border: 0.1px solid red;
-    animation: dropIn 0.5s forwards;
-    animation-delay: 0.5s;
-}
+        .top-bar {
+            background-color: rgba(51, 51, 51, 0.8);
+            backdrop-filter: blur(3px);
+            color: transparent;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 15px;
+            position: absolute;
+            top: 20px;
+            width: calc(95% - 40px);
+            z-index: 2;
+            border: 0.1px solid red;
+        }
         .discord-button {
             background-color: #7289DA; 
             color: white;
@@ -110,28 +103,24 @@
             transform: scale(1.1) rotate(-5deg);
         }
 
-main {
-    padding: 20px;
-    text-align: center;
-    margin-top: 80px;
-    flex-grow: 2;
-    animation: dropIn 0.5s forwards; /* Apply drop-in animation */
-    animation-delay: 1s; /* Delay for a staggered effect */
-}
-
-.hover-box-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    bottom: 20px;
-    transform: translate(-50%, -50%);
-    animation: dropIn 0.5s forwards; /* Apply drop-in animation */
-    animation-delay: 1.5s; /* Delay for a staggered effect */
-}
+        main {
+            padding: 20px;
+            text-align: center;
+            margin-top: 80px;
+            flex-grow: 2;
+        }
+        
+        .hover-box-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            bottom: 20px;
+            transform: translate(-50%, -50%);
+        }
         
         .hover-box {
             background-color: rgba(68, 68, 68, 0.7);
