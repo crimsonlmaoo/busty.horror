@@ -44,6 +44,7 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
+            margin-right: 10px;
         }
 
         .discord-button:hover {
@@ -150,12 +151,13 @@
         <p>One of the best of the best Gorilla Tag Horror games by Roasty.</p>
         <a href="https://roastedduckreel.itch.io/busty-horror" class="big-button" target="_blank">Download Now!!!</a>
     </main>
-       <audio autoplay loop id="music">
+    <audio autoplay loop id="music">
         <source src="lostwoods.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
     <script>
+        document.getElementById("music").play();
         const muteButton = document.getElementById('mute-button');
         const music = document.getElementById('music');
 
