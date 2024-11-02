@@ -156,9 +156,9 @@
     </audio>
 
     <script>
-        document.getElementById("music").play();
         const muteButton = document.getElementById('mute-button');
         const music = document.getElementById('music');
+        document.getElementById("music").play();
 
         muteButton.addEventListener('click', () => {
             music.muted = !music.muted;
