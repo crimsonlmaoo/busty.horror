@@ -50,6 +50,23 @@
             background-color: #5b6eae;
             transform: scale(1.1) rotate(-5deg);
         }
+
+        .mute-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
+        }
+
+        .mute-button:hover {
+            background-color: red;
+            transform: scale(1.1) rotate(-5deg);
+            color: white;
+        }
         
         .big-button {
             display: inline-block;
@@ -119,31 +136,13 @@
             z-index: 10;
     </style>
 </head>
-    <script>
-    const audio = new Audio('https://github.com/crimsonlmaoo/busty.horror/raw/refs/heads/main/lostwoods.mp3');
-    audio.loop = true;
-
-    const muteButton = document.getElementById('mute-button');
-    let isMuted = false;
-
-    muteButton.addEventListener('click', () => {
-        if (isMuted) {
-            audio.play();
-        }
-        isMuted = !isMuted;
-        audio.muted = isMuted;
-        muteButton.textContent = isMuted ? 'Unmute' : 'Mute';
-    });
-});
-        
-    </script>
 <body>
     <marquee>Download Busty Horror right now!!!!!! https://roastedduckreel.itch.io/busty-horror</marquee>
 
     <div class="top-bar">
         <h1>Busty Horror</h1>
         <a href="https://discord.gg/bustyhorror" class="discord-button">Discord Server</a>
-        <li><button id="mute-button">Mute</button></li>
+        <button class="mute-button" id="mute-button">Mute</button>
     </div>
 
     <main>
@@ -151,5 +150,24 @@
         <p>One of the best of the best Gorilla Tag Horror games by Roasty.</p>
         <a href="https://roastedduckreel.itch.io/busty-horror" class="big-button" target="_blank">Download Now!!!</a>
     </main>
+       <audio autoplay loop id="music">
+        <source src="lostwoods.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const muteButton = document.getElementById('mute-button');
+        const music = document.getElementById('music');
+
+        muteButton.addEventListener('click', () => {
+            music.muted = !music.muted;
+
+            if (music.muted) {
+                muteButton.textContent = 'Unmute';
+            } else {
+                muteButton.textContent = 'Mute';
+            }
+        });
+    </script>
 </body>
 </html>
