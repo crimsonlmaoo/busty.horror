@@ -62,6 +62,17 @@
             padding: 20px;
             text-align: center;
         }
+        
+        .hover-box-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute; /* Position it in the center of the viewport */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center it */
+            z-index: 1; /* Ensure it appears above other content */
+        }
         .hover-box {
             background-color: rgba(68, 68, 68, 0.7);
             color: white;
@@ -71,7 +82,7 @@
             display: inline-block;
             margin: 20px auto;
             width: 200px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
@@ -96,9 +107,11 @@
         <a href="https://roastedduckreel.itch.io/busty-horror" class="big-button" target="_blank">Download Now!!!</a>
     </main>
 
-            <div class="hover-box">
-            <h3>Join Busty Horror today!!!</h3>
-            <p>Get scared, have fun, and play anytime!!</p>
+    <div class="hover-box-container">
+        <div class="hover-box">
+            <h3>Join the Adventure!</h3>
+            <p>Experience the thrill of Busty Horror.</p>
         </div>
+    </div>
 </body>
 </html>
