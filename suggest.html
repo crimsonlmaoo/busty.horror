@@ -76,11 +76,16 @@
         <a href="index.html" class="back-button">Back</a>
     </div>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function(){
-            emailjs.init("jfz6ZoVefk0iM1zbY");
-        })();
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "jfz6ZoVefk0iM1zbY",
+      });
+   })();
+</script>
 
         const submitButton = document.getElementById('submitSuggestion');
         const nameInput = document.getElementById('name');
