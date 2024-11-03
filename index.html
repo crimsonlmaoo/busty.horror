@@ -54,11 +54,13 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
+            filter: brightness(1.2) blur(1px);
         }
 
         .discord-button:hover {
             background-color: #5b6eae;
             transform: scale(1.1) rotate(-5deg);
+            filter: brightness(1.5) blur(0);
         }
         
         .link-text {
@@ -66,6 +68,7 @@
             text-decoration: none;
             font-size: 1.2em;
             margin-right: auto;
+            filter: brightness(1.2) blur(1px);
         }
 
 
@@ -78,12 +81,14 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s, color 0.3s;
+            filter: brightness(1.2) blur(1px);
         }
 
         .mute-button:hover {
             background-color: red;
             transform: scale(1.1) rotate(-5deg);
             color: white;
+            filter: brightness(1.5) blur(0);
         }
         
         .big-button {
@@ -98,11 +103,13 @@
             margin-top: 20px;
             transition: background-color 0.3s;
             transition: background-color 0.3s, transform 0.3s;
+            filter: brightness(1.2) blur(1px);
         }
 
         .big-button:hover {
             background-color: black;
             transform: scale(1.1) rotate(-5deg);
+            filter: brightness(1.5) blur(0);
         }
 
         main {
@@ -135,23 +142,14 @@
             width: 200px;
             backdrop-filter: blur(3px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            filter: brightness(1.2) blur(1px);
         }
 
         .hover-box:hover {
             transform: rotate(-5deg) scale(1.1);
             width: 220px;
+            filter: brightness(1.5) blur(0);
         }
-        
-        .blurred-cursor {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            filter: blur(3px);
-            pointer-events: none;
-            transition: transform 0.1s;
-            z-index: 10;
     </style>
 </head>
 <body>
