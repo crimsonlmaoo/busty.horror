@@ -66,27 +66,43 @@
             font-size: 1.2em;
             margin-right: auto;
         }
+
+
+        .mute-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
+        }
+
+        .mute-button:hover {
+            background-color: red;
+            transform: scale(1.1) rotate(-5deg);
+            color: white;
+        }
         
-.button-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
+        .big-button {
+            display: inline-block;
+            background-color: red;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 1.5em;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-.big-button, .mute-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
-    transition: background-color 0.3s;
-}
-
-.big-button:hover, .mute-button:hover {
-    background-color: #0056b3;
-}
+        .big-button:hover {
+            background-color: black;
+            transform: scale(1.1) rotate(-5deg);
+        }
 
         main {
             padding: 20px;
@@ -144,10 +160,7 @@
         <a href="https://crimsonlmaoo.github.io/bustyhorror/" class="link-text"><h1>Busty Horror</h1></a>
         <a href="https://discord.gg/bustyhorror" class="discord-button">Discord Server</a>
     </div>
-    <div class="button-container">
-        <button class="big-button">Big Button</button>
-        <button class="mute-button" id="muteButton">Mute</button>
-    </div>
+
     <main>
         <h2>Welcome to the Busty Horror Site.</h2>
         <p>One of the best of the best Gorilla Tag Horror games by Roasty.</p>
