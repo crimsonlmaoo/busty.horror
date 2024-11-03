@@ -164,6 +164,7 @@
         <h2>Welcome to the Busty Horror Site.</h2>
         <p>One of the best of the best Gorilla Tag Horror games by Roasty.</p>
         <a href="https://roastedduckreel.itch.io/busty-horror" class="big-button" target="_blank">Download Now!!!</a>
+        <button class="mute-button" id="muteButton">Mute</button>
     </main>
     <audio autoplay loop id="music">
         <source src="lostwoods.mp3" type="audio/mp3">
@@ -172,6 +173,16 @@
 
     <script>
         document.getElementById("music").play();
+        const muteButton = document.getElementById('muteButton');
+        const audio = document.getElementById('audio');
+        let isMuted = false;
+
+        muteButton.addEventListener('click', function() {
+            isMuted = !isMuted;
+            audio.muted = isMuted;
+
+            muteButton.textContent = isMuted ? 'Unmute' : 'Mute';
+        });
     </script>
 </body>
 </html>
