@@ -1,5 +1,10 @@
-document.getElementById('overlay').addEventListener('click', function() {
+document.addEventListener('click', function(event) {
 
-    document.getElementById('overlay').style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
+    const overlay = document.getElementById('overlay');
+    if (overlay.style.display !== 'none') {
+
+        overlay.style.display = 'none';
+
+        document.getElementById('main-content').style.display = 'block';
+    }
 });
