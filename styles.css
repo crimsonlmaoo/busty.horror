@@ -4,40 +4,21 @@ body {
     padding: 0;
     background-color: black;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    position: relative;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    cursor: url('oth704.cur'), auto;
-    filter: brightness(1.2);
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
 }
 
 .top-bar {
-    background-color: rgba(51, 51, 51, 0.8);
-    backdrop-filter: blur(15px);
+    background-color: #333;
     color: transparent;
-    padding: 10px 20px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 15px;
-    position: absolute;
-    top: 20px;
-    width: calc(100% - 40px);
-    z-index: 2;
+    background-image: linear-gradient(to right, red, black);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
-.discord-button, .mute-button, .big-button {
+.discord-button {
     background-color: #7289DA; 
     color: white;
     border: none;
@@ -45,85 +26,30 @@ body {
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-    filter: brightness(1.2);
 }
 
 .discord-button:hover {
     background-color: #5b6eae;
-    transform: scale(1.1) rotate(-5deg);
-    filter: brightness(1.5);
-}
-
-.mute-button {
-    background-color: black;
-}
-
-.mute-button:hover {
-    background-color: red;
-    transform: scale(1.1) rotate(-5deg);
-    color: white;
-    filter: brightness(1.5);
 }
 
 .big-button {
     display: inline-block;
     background-color: red;
+    color: white;
     padding: 20px 40px;
     text-align: center;
     font-size: 1.5em;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
 .big-button:hover {
     background-color: black;
-    transform: scale(1.1) rotate(-5deg);
-    filter: brightness(1.5);
 }
 
 main {
     padding: 20px;
     text-align: center;
-    margin-top: 80px;
-    flex-grow: 2;
-}
-
-.hover-box-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.hover-box {
-    background-color: rgba(68, 68, 68, 0.7);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s, width 0.3s;
-    display: inline-block;
-    margin: 20px auto;
-    width: 200px;
-    backdrop-filter: blur(3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    filter: brightness(1.2);
-}
-
-.hover-box:hover {
-    transform: rotate(-5deg) scale(1.1);
-    width: 220px;
-    filter: brightness(1.5);
-}
-
-marquee {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: red;
-    padding: 10px 0;
-    font-size: 1.2em;
 }
